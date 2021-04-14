@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Form, FormGroup, Input, Label, Row, Col, Button } from 'reactstrap';
+import { Form, FormGroup, Input, Label, Button } from 'reactstrap';
 import * as yup from 'yup';
 import './form.styles.css';
 
@@ -53,8 +53,8 @@ const newForm = ({ submitUser }) => {
     const handleChange = (event) => {
         event.persist()
         validateChange(event)
-        if (event.target.name === 'terms'){
-            setFormState({ ...formState, terms: event.target.checked})
+        if (event.target.name === 'terms') {
+            setFormState({ ...formState, terms: event.target.checked })
         } else {
             setFormState({ ...formState, [event.target.name]: event.target.value })
         }
@@ -71,12 +71,12 @@ const newForm = ({ submitUser }) => {
         })
     }
 
-    return(
+    return (
         <Form onSubmit={handleSubmit}>
-            <h1 style={{marginBottom: '5%'}}>New User</h1>
+            <h1 style={{ marginBottom: '5%' }}>New User</h1>
             <FormGroup>
                 <label htmlFor='name'>Name</label>
-                <Input  
+                <Input
                     type='text'
                     name='name'
                     id='name'

@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import newForm from './components/form-component';
+import { Container, Row, Col } from 'reactstrap';
+import axios from 'axios';
+import newTable from './components/table';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [post, setPost] = useState([])
+  
+  const submitUser = (newUser) => {
+    axios
+      .post('https://regres.in/api/users', newUser)
+      .then((response) => {
+        setPost(response.data)
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  return(
+    <Container className='App'>
+      <Row>
+        <Col xs='10' md='4' xl='5' style={{ marginRight: '5%' }}>
+          <newForm submitUser={submitUser}></newForm>
+        </Col>
+        <Col>
+          <h1>USERS</h1>
+          <newTable USER={post} />
+        </Col>
+      </Row>
+    </Container>
+  )
 }
 
 export default App;

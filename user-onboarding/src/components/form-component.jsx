@@ -75,7 +75,7 @@ const newForm = ({ submitUser }) => {
         <Form onSubmit={handleSubmit}>
             <h1 style={{ marginBottom: '5%' }}>New User</h1>
             <FormGroup>
-                <label htmlFor='name'>Name</label>
+                <Label htmlFor='name'>Name</Label>
                 <Input
                     type='text'
                     name='name'
@@ -90,7 +90,7 @@ const newForm = ({ submitUser }) => {
                 ) : null}
             </FormGroup>
             <FormGroup>
-                <label htmlFor='email'>Email</label>
+                <Label htmlFor='email'>Email</Label>
                 <Input
                     type='email'
                     name='email'
@@ -105,7 +105,7 @@ const newForm = ({ submitUser }) => {
                 ) : null}
             </FormGroup>
             <FormGroup>
-                <label htmlFor='password'>Password</label>
+                <Label htmlFor='password'>Password</Label>
                 <Input
                     type='password'
                     name='password'

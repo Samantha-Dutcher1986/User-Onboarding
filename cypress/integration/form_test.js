@@ -56,3 +56,5 @@ describe('Ensure submit button remains disabled if terms button is not checked',
         cy.get('[type="submit"]').should('be.disabled')
     })
 })
+
+//getting build errors and can't pinpoint the problem. Have  Screenshots if anyone can zoom and help me troubleshoot this

@@ -1,0 +1,33 @@
+body {
+    width: 50%;
+    margin: 0 auto;
+    background-color: oldlace;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px SOLID black;
+    padding: 5px;
+}
+input {
+    margin: 10px;
+}
+button {
+    background-color: oldlace;
+    border: 2px solid black;
+    padding: 5px;
+}
+button:hover {
+    background-color: black;
+    color: oldlace;
+    border: 2px solid white;
+    padding: 5px;
+}
+.tos {
+    margin: 3px auto;
+}
+.error {
+    color: red;
+}
